@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="./onreadystatechange_exercise_content.css">
+    </head>
+
+    <body>
+        <div id="content"></div> <!--Area where the HTTP response content will be displayed-->
+        <input type="button" value="click here" id="clickhere" onclick="getContent()"> <!--Input button used to trigger the sending of the HTTP request-->
+
+
+        <script type="text/javascript">
+            var ajax = new XMLHttpRequest(); //Creating an XMLHttpRequest object
+            ajax.open('GET', 'onreadystatechange_exercise_content.html'); //Using the .open method; we're using the GET method to request information from the specified URL
+            ajax.onreadystatechange = function () { //Defines a function to be executed when the state/status of the XMLHttpRequest object changes
+                if (ajax.readyState = 4) {  //Declares an if statement that executes if the state of the object is 4
+                    document.getElementById('content').innerHTML = ajax.responseText; //Updates the content element with the server response text
+                }
+            }
+
+            function getContent() { //Defines the function that sends the the request to the server
+                ajax.send();    //The .send method sends the XMLHttpRequest to th server
+            }
+
+        </script>
+
+    </body>
+</html>

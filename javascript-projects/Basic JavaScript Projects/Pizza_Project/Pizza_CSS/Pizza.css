@@ -1,0 +1,267 @@
+    html {
+        scroll-behavior: smooth;
+    }
+    #menuBG {
+        width:640px;
+        height:300px;
+        margin:10px auto;
+    }
+
+    #frmMenu {
+        margin:15px auto auto auto;
+        width:640px;
+        height:200px;
+        border:medium solid red;
+        border-radius:10px;
+        padding:10px;
+        background-color:rgb(236, 147, 73);
+    }
+
+    #totalPrice {
+        width:200px;
+        height:190px;
+        margin:0 auto;
+        float:right;
+    }
+
+    .left {
+        width:200px;
+        height:200px;
+        float:left;
+        margin:auto auto auto 40px;
+        
+       
+    }
+
+    .right {
+        width:200px;
+        height:200px;
+        float:right;
+        margin:auto -20px auto auto;
+    }
+
+    .center {
+        width:200px;
+        height:200px;
+        float:left;
+    } 
+
+    #showText {
+        width:200px;
+        height:190px;
+        margin:0px auto;
+        float:left;
+    }
+
+    #cart {
+        top:0;
+        margin:0px auto;
+        width:400px;
+        height:200px;
+    }
+
+    #btnOrder {
+        margin: 10px auto auto 265px;
+        width:100px;
+        height:40px;
+    }
+
+    .btnOrderDiv {
+        margin:auto;
+    }
+
+    body {
+        background-color:rgb(255, 251, 120);
+        min-height: 100vh;
+    }
+
+    h1 {
+        font-family:Arial, Helvetica, sans-serif;
+        color:maroon;
+    }
+
+    h3 {
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        color:brown;
+    }
+
+    div {
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        color:darkslategray;
+    }
+
+    body {
+        opacity: 1;
+        transition: 5s opacity;
+      }
+      
+    body.fade-out {
+        opacity: 0;
+        transition: none;
+      }
+
+    .contact {
+        width:30%;
+        min-width:230px;
+        display:block;
+        margin:auto;
+        float:left;
+        border:medium solid red;
+        border-radius:10px;
+        padding:20px;
+        box-sizing:border-box;
+        background-color:rgb(236, 147, 73);
+        z-index:2;
+        position:relative;
+      }
+
+    .form-popup {
+        display: none;
+        position:fixed;
+        width:50%;
+        height:230px;
+        padding:0 0 0 20px;
+        border:medium solid red;
+        border-radius:10px;
+        background-color:rgb(236, 147, 73);
+        z-index:4;
+    }
+
+    .form-container {
+        position:fixed;
+        
+    }
+
+    .dealsButtonDiv {
+        margin:0;
+        position:absolute;
+        top:50%;
+        left:40%;
+        transform: translateY(-50%, -50%);
+        -webkit-animation: spin 4s infinite linear;
+        z-index:3;
+        
+    }
+
+    @-webkit-keyframes spin {
+        from {transform:rotate(0deg);}
+        to {transform:rotate(360deg);}
+    }
+
+    .open-button {
+        background-color:rgb(255, 177, 112);
+        border: 2px solid red;
+        border-radius:10px;
+
+    }
+
+    #breathingImg {
+        width:100%;
+        border-radius: 10px;
+        margin:auto;
+        animation: zoominoutsinglefeatured 15s forwards;
+        z-index:1;
+    }
+
+    @keyframes zoominoutsinglefeatured {
+        0% {
+            transform: scale(1,1);
+        }
+        50% {
+            transform: scale(1.2,1.2);
+        }
+        100% {
+            transform: scale(1,1);
+        }
+    }
+    
+
+
+    li {
+        display: inline;
+    }
+
+    menu {
+        width:60%;
+        list-style-type:none;
+        margin:auto;
+        overflow:0;
+        background:rgb(236, 147, 73);
+        padding:20px;
+        border: medium solid red;
+        border-radius:10px;
+        text-align:center;
+    }
+
+    li a {
+        color:black;
+        text-align:center;
+        padding: 14px 30px;
+        font-family:Arial, Helvetica, sans-serif;
+        font-weight:bold;
+        text-decoration: none;
+        border: thin solid red;
+        border-radius:5px;
+        background-color:rgb(255, 158, 79);
+    }
+
+    li a:hover {
+        background-color:rgb(145, 90, 45);
+    }
+
+    #slideshow {
+        margin:50px auto;
+        position:relative;
+        width:640px;
+        height:426px;
+        padding:10px;
+        box-shadow: 0 0 20px rgba(0,0,0,0.4);
+    }
+
+    #slideshow > div {
+        position:absolute;
+        top: 10px; 
+        left: 10px; 
+        right: 10px; 
+        bottom: 10px; 
+    }
+
+    #pizza {
+        position:relative;
+        text-align:center;
+    }
+
+    .formContainer2 {
+        display: none;
+        width:30%;
+        margin:auto;
+        float:left;
+        border:medium solid red;
+        border-radius:10px;
+        padding:20px;
+        box-sizing:border-box;
+        background-color:rgb(236, 147, 73);
+        z-index:2;
+        position:relative;
+    }
+
+    .stickybuttondiv {
+        position: sticky;
+        top:0;
+        z-index:10;
+        float:right;
+    }
+
+    .stickybutton {
+        background:rgb(236, 147, 73);
+        border: medium solid red;
+        border-radius:10px;
+        font-size:larger;
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        color:brown;;
+        font-weight:bold;
+    }
+
+    .contactinput {
+        margin:5px;
+    }

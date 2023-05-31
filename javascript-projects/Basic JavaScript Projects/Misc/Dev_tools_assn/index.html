@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <script>
+            A = "Always ";
+            B = "remember: ";
+            document.write(A + B);
+
+            X = "you ";
+            Y = "are ";
+            document.write(X + Y);
+
+            M = "unique ";
+            N = "just like everyone else.";
+            document.write(M + N);
+
+            function count_To_Ten() {
+                var Digit = "";
+                var X = 1;
+                while (X < 11) {
+                    Digit += "<br>" + X;
+                    X++;
+                }
+                document.getElementById("Counting_to_Ten").innerHTML = Digit;
+            }
+        </script>
+
+        <p id="Counting_to_Ten"></p>
+        <button onclick="count_To_Ten()">Click here to start</button>
+    </body>
+
+</html>

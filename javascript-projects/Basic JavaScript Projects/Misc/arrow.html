@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
+    <body>
+
+        <p id="test" onclick="arrowFunction()">test</p>
+
+        <p id="demo" onclick="myFunction()">try</p>
+        <script>
+            arrowFunction = () => document.getElementById("test").innerHTML = "butter";
+
+            const ages = [16, 25, 13, 17, 23, 86, 35];
+    
+            function checkID(value, index, array) {
+                return value >= 21;
+            }
+            
+            let someOver21 = ages.some(checkID);
+            
+            document.getElementById("demo").innerHTML = "It is " + someOver21 + " that some people here are old enough to drink.";
+        </script>
+    </body>
+</html>

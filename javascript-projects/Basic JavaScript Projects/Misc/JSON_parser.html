@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
+    <body>
+
+        <p id=dogInfo></p>
+        <p id="example1">x</p>
+        <p id=demo></p>
+
+
+    <script> 
+        var obj = JSON.parse('{"dogType":"Dachshund","dogName":"Gimli"}');
+
+        document.getElementById("dogInfo").innerHTML = obj.dogName + " is a " + obj.dogType;
+    
+        localStorage.setItem("dogColor", "Cinnamon");
+        let output = localStorage.getItem("dogColor");
+        document.getElementById("example1").innerHTML = "He is " + output + " colored.";
+
+    </script>
+    </body>
+</html>
+

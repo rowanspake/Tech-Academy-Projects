@@ -1,0 +1,11 @@
+<!-- EMAIL SIGN UP-->
+            <div id="deals" class="text-center">
+                <form>
+                    <h1 class="text-primary my-5">Sign up for Movie Club Rewards!</h1>
+                    <div class="form-group">
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+            <!--/EMAIL SIGN UP-->

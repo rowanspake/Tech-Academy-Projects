@@ -1,0 +1,55 @@
+.center {
+    display: block; 
+    margin-left: auto;
+    margin-right: auto;
+    width: 25%;
+}
+
+img {
+    filter: grayscale(50%);
+    filter: blur(5px);
+    border: 10px groove aquamarine;
+    border-radius: 2px 8px 16px 32px;
+}
+
+footer{
+    text-align: center;
+    font-weight: bold;
+}
+
+h1 {
+    text-align: center;
+}
+
+table {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    border: 5px dotted green;
+}
+
+td {
+    padding: 15px;
+}
+
+th {
+    background-color: goldenrod;
+}
+
+.img_container {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    color: chartreuse;
+    font-family: Impact, 'Arial Narrow Bold', sans-serif;
+}
+
+.centered_text {
+    position: absolute;
+    top: 50%;
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    font-size: 4rem;
+}
+

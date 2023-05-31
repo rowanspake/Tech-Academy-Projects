@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Pizza Drill Demo</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta content="width=device-width,initial-scale=1.0" name="viewport">
+        <script src="./Pizza_JavaScript/Pizza.js" defer></script>
+        <link rel="stylesheet" type="text/css" href="./Pizza_CSS/Pizza.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    </head>
+    <body>
+        <div id="menuBG">
+            <h1 style="margin:auto; text-align:center;">Pizza Drill Tutorial</h1>
+
+            <div>
+                <menu>
+                    <li><a href="#frmMenu">Menu</a></li>
+                    <li><a href="#dealsButtonDiv">Deals</a></li>
+                    <li><a href="#contactDiv">Contact Us!</a></li>
+                </menu>
+            </div>
+            
+            <div class="btnOrderDiv">
+                <input id="btnOrder" type="button" onclick="getReciept()"
+                value="Place Order">
+            </div>
+            <form id="frmMenu">
+                <div class="menu left">
+                    <h3>Size:</h3>
+                    <input class="size" type="radio" name="Size"
+                        value="Personal Pizza">Personal Pizza<br>
+                    <input class="size" type="radio" name="Size"
+                        value="Small Pizza">Small Pizza<br>
+                    <input class="size" type="radio" name="Size"
+                        value="Medium Pizza">Medium Pizza<br>
+                    <input class="size" type="radio" name="Size"
+                        value="Large Pizza" checked>Large Pizza<br>
+                    <input class="size" type="radio" name="Size"
+                        value="Extra Large Pizza">Extra Large Pizza<br>
+                </div>
+                <div class="menu center">
+                    <h3>Veggies</h3>
+                    <input class="toppings" type="checkbox" name="Topping"
+                        value="Mushrooms">Mushrooms<br>
+                    <input class="toppings" type="checkbox" name="Topping"
+                        value="Onions">Onions<br>
+                    <input class="toppings" type="checkbox" name="Topping"
+                        value="Tomatoes">Tomatoes<br>
+                    <input class="toppings" type="checkbox" name="Topping"
+                        value="Olives">Olives<br>
+                    <input class="toppings" type="checkbox" name="Topping"
+                        value="Green Peppers">Green Peppers<br>
+                </div>
+                <div class="menu right">
+                    <h3>Meats:</h3>
+                    <input class="toppings" type="checkbox" name="Topping"
+                        value="Pepperoni">Pepperoni<br>
+                    <input class="toppings" type="checkbox" name="Topping"
+                        value="Sausage">Sausage<br>
+                    <input class="toppings" type="checkbox" name="Topping"
+                        value="Canadian Bacon">Canadian Bacon<br>
+                    <input class="toppings" type="checkbox" name="Topping"
+                        value="Ground Beef">Ground Beef<br>
+                    <input class="toppings" type="checkbox" name="Topping"
+                        value="Anchovy">Anchovy<br>
+                    <input class="toppings" type="checkbox" name="Topping"
+                        value="Chicken">Chicken<br>
+                    <input class="toppings" type="checkbox" name="Topping"
+                        value="Bacon">Bacon<br>
+                </div>
+                <div id="cart">
+                    <div id="showText"></div>
+                    <div id="totalPrice"></div>
+                </div>
+            </form>
+        </div>
+
+        <div>
+            <div class="dealsButtonDiv" id="dealsButtonDiv">
+                <button class="open-button" onclick="openForm()">Click here to sign up for big savings!</button>
+            </div>
+
+            <div class="form-popup" id="dealsForm">
+                <form action="#" class="form-container">
+                    <h2>Big pizza savings!</h2>
+                    First Name: <br><input type="text" name="fName" required><br>
+                    Last Name: <br><input type="text" name="lName" required><br>
+                    Email: <br><input type="text" name="eMail" required><br>
+                    <input type="submit" name="dealsSubmit" value="Submit">
+                    <button type="button" onclick="closeForm()" value="Cancel">Cancel</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="contact" id="contactDiv">
+            <form name="contactForm" action="#" onsubmit="return validateForm()" method="post">
+                <h3>Contact Info</h3>
+                First Name: <br><input class="contactinput" type="text" name="fName"><br>
+                Last Name: <br><input class="contactinput" type="text" name="lName"><br>
+                Phone Number: <br><input class="contactinput" type="text" name="phoneNumber"><br>
+                <input id="submit" class="contactinput" type="submit" value="Submit" name="submit">
+            </form>
+        </div>
+
+        <div class="stickybuttondiv" id="stickybuttoncontainer">
+            <button class="stickybutton" onclick="openStickyForm()">Another contact form<br>incase you missed the 1st one</button>
+        </div>
+        
+        <div class="formContainer2" id="contactPopup">
+            <form name="contactForm2" action="#" onsubmit="return validateForm()" method="post">
+                <h3>Contact Info</h3>
+                First Name: <br><input class="contactinput" type="text" name="fName"><br>
+                Last Name: <br><input class="contactinput" type="text" name="lName"><br>
+                Phone Number: <br><input class="contactinput" type="text" name="phoneNumber"><br>
+                <input id="submit" class="contactinput" type="submit" value="Submit" name="submit">
+            </form>
+        </div>
+
+
+        <div id="imgContainer">
+            <img src="./images/pizza.jpg" alt="pizza" id="breathingImg">
+        </div>
+
+        <div id="pizza">
+            pizza
+        </div>
+
+        <div id="slideshow">
+            <div>
+                <img src="./images/pizzaiolo1.jpg" alt="Dusting hands with flour">
+            </div>
+            <div>
+                <img src="./images/pizzaiolo2.jpg" alt="Forming dough balls">
+            </div>
+            <div>
+                <img src="./images/pizzaiolo3.jpg" alt="Throwin' pies">
+            </div>
+        </div>
+
+        <script>
+            document.body.classList.add('fade-out');
+
+            window.addEventListener('DOMContentLoaded', () => {
+                document.body.classList.remove('fade-out');
+            });
+        </script>
+    </body>
+
+    
+</html>
